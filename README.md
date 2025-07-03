@@ -1,6 +1,6 @@
-# Babyzar
+# Heart Disease API
 
-Babyzar combina Baby (Bebê) + Bazar e visa simplificar o controle de roupas dos bebês, que facilmente se perdem. Os pais poderão então registrar qual valor de compra e já sugerir um valor de venda, facilitando o uso sustentável de roupas e permitindo a geração de uma renda extra para que os pais possam comprar fraldas.
+Projeto de aplicação full stack que consulta modelo de Machine Learning para previsão de insuficiência cardíaca, a partir de dados clínicos do paciente. Desenvolvido para a Pós-Graduação de Engenharia de Software da PUC-Rio.
 
 ## Índice
 
@@ -10,12 +10,12 @@ Babyzar combina Baby (Bebê) + Bazar e visa simplificar o controle de roupas dos
 4. [Autor]
 
 ## Sobre
-Este projeto é uma API que visa controlar as roupas de um bebê, podendo ser usada por pais para ter o estoque de roupas e desde já planejar a venda das mesmas. Ela permite adicionar, remover e consultar as roupas que estão no banco de dados
+Este projeto é uma API que visa prever se um determinado paciente possui insuficiência cardíaca ou não a partir dos seus dados clínicos. Para treinamento e teste do modelo, foi usado um dataset público do Kaggle, Heart Failure Prediction Dataset. O modelo foi então exportado e usado no backend do sistema.
 
 ## Execução
-1. Abrir o diretório referente a pasta babyzar_api
+1. Abrir o diretório referente a pasta api
    ```
-   $ cd babyzar_api
+   $ cd api
    ```
 2. É indicada a instalação de um ambiente virtual para instalação e uso nas versões adequadas dos pacotes necessários:
     Instalação:
@@ -34,11 +34,24 @@ Este projeto é uma API que visa controlar as roupas de um bebê, podendo ser us
     ```
     (venv) $ flask run --host 0.0.0.0 --port 5000  
     ```
+
+Observação: Para garantir a qualidade da aplicação, foi adicionado um arquivo Pytest que visa garantir uma acurácia mínima de 80% em futuras atualizações do modelo. Para executar o teste, use o seguinte comando no terminal.
+```
+    (venv) $ pytest -v teste_modelo.py 
+```
+
 ## Tecnologias usadas
 Python
 Flask
 pydantic
 SQLAlchemy
+Skicit-Learn
+Pandas
+Matplotlib
+Pytest
+HTML
+CSS
+JS
 
 ## Autor
 Ysrael Oliveira (ysraeldev@gmail.com)
