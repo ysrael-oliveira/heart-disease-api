@@ -34,6 +34,7 @@ Este projeto é uma API que visa prever se um determinado paciente possui insufi
     ```
     (venv) $ flask run --host 0.0.0.0 --port 5000  
     ```
+5. Abrir no navegador o arquivo index.html, presente na pasta 'front'.
 
 Observação: Para garantir a qualidade da aplicação, foi adicionado um arquivo Pytest que visa garantir uma acurácia mínima de 80% em futuras atualizações do modelo. Para executar o teste, use o seguinte comando no terminal.
 ```
