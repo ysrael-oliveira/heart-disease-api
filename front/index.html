@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Heart API</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Heart Failure Prediction API</h1>
+        </div>
+    </header>
+
+    <div class = "container">
+        <div class = "left-panel">
+            <section class="form">
+                <div class="form-group">
+                    <label for="age">Idade</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sex">Sexo</label>
+                    <select id="sex" name="sex" required>
+                        <option value="F">Feminino</option>
+                        <option value="M">Masculino</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="chest_pain_type">Tipo de dor no peito</label>
+                    <select id="chest_pain_type" name="chest_pain_type" required>
+                        <option value="TA">Angina Típica</option>
+                        <option value="ATA">Angina Atípica</option>
+                        <option value="NAP">Dor não-anginosa</option>
+                        <option value="ASY">Assintomático</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="resting_bp">Pressão arterial em repouso (mm Hg)</label>
+                    <input type="number" id="resting_bp" name="resting_bp" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cholesterol">Colesterol (mg/dl)</label>
+                    <input type="number" id="cholesterol" name="cholesterol" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fasting_bs">Glicemia em jejum &gt; 120 mg/dl?</label>
+                    <select id="fasting_bs" name="fasting_bs" required>
+                        <option value="0">Não</option>
+                        <option value="1">Sim</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="resting_ecg">Eletrocardiograma em repouso</label>
+                    <select id="resting_ecg" name="resting_ecg" required>
+                        <option value="Normal">Normal</option>
+                        <option value="ST">ST</option>
+                        <option value="LVH">LVH</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="max_hr">Frequência cardíaca máxima</label>
+                    <input type="number" id="max_hr" name="max_hr" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="exercise_angina">Angina induzida por exercício?</label>
+                    <select id="exercise_angina" name="exercise_angina" required>
+                        <option value="N">Não</option>
+                        <option value="Y">Sim</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="oldpeak">Depressão do Segmento ST (oldpeak)</label>
+                    <input type="number" step="0.1" id="oldpeak" name="oldpeak" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="st_slope">Inclinação do segmento ST</label>
+                    <select id="st_slope" name="st_slope" required>
+                        <option value="Up">Ascendente</option>
+                        <option value="Flat">Plana</option>
+                        <option value="Down">Descendente</option>
+                    </select>
+                </div>
+
+              
+                    <button type="button" onclick="novoItem(event)">Adicionar</button>
+
+
+            </section>
+        </div>
+        <div class="right-panel">
+            <section class="tabela">
+                <table id="tabelaPacientes">
+                    <tr>
+                        <th>Id</th>
+                        <th>Idade</th>
+                        <th>Sexo</th>
+                        <th>Tipo de Dor no Peito</th>
+                        <th>Pressão (mm Hg)</th>
+                        <th>Colesterol (mg/dL)</th>
+                        <th>Glicemia Jejum</th>
+                        <th>ECG Repouso</th>
+                        <th>Frequência Máxima</th>
+                        <th>Angina Induzida</th>
+                        <th>Oldpeak</th>
+                        <th>Inclinação ST</th>
+                        <th>Diagnóstico</th>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
